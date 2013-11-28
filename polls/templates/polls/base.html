@@ -1,0 +1,52 @@
+ 
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+    <head>         
+        <title>Polls- {% block title %}Vote Now Vote Today!{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-fluid-adj.css' %}">
+    </head>
+
+    <body>
+      
+<div class="navbar navbar-inverse navbar-fixed-top">
+   <div class="navbar-inner">
+       <div class="container">
+           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+           </button>
+           <a class="brand" href="/polls/">Polls</a>
+
+           <div class="nav-collapse collapse">
+               <ul class="nav pull-right">
+                         <li class="navbar-text">Welcome!</li>                   
+            </div>
+           <!--/.nav-collapse -->
+       </div>
+   </div>
+</div>
+<div style="text-align:center";class="span9"> <!--body block for the index page-->
+             
+            {% block body_block %}
+            {% endblock %}
+
+</div>
+<!--/.fluid-container-->
+<hr>
+
+    <footer>
+    <div align="center";class="footer">
+        <p>&copy; Polls : Vote Now Vote Today! 2013</p>
+    </div>
+    </footer>
+</hr>
+ 
+    <script src="{% static 'js/jquery-2.0.3.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+          
+    </body>
+</html>

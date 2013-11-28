@@ -1,0 +1,26 @@
+{% extends 'polls/base.html' %}
+
+{% block body_block %}
+
+{% load url from future %}
+
+<div class="hero-unit" align="center">
+    <h1>Ready to Vote</h1>
+    <p> Your vote matters !</p>
+</div>
+
+
+<div class="row-fluid">
+	<div class="span10">
+		{% if latest_poll_list %}
+    		<ul>
+    	{% for poll in latest_poll_list %}
+        	<li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+    	{% endfor %}
+    		</ul>
+		{% else %}
+            <p>No polls are available.</p>
+		{% endif %}
+	<div>
+<div>
+{% endblock %}
